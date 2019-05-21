@@ -8,20 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		FA4C02A52292EB5500EB5EC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02A42292EB5500EB5EC4 /* AppDelegate.swift */; };
-		FA4C02A72292EB5500EB5EC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02A62292EB5500EB5EC4 /* ViewController.swift */; };
 		FA4C02AA2292EB5500EB5EC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4C02A82292EB5500EB5EC4 /* Main.storyboard */; };
 		FA4C02AC2292EB5600EB5EC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4C02AB2292EB5600EB5EC4 /* Assets.xcassets */; };
 		FA4C02AF2292EB5600EB5EC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA4C02AD2292EB5600EB5EC4 /* LaunchScreen.storyboard */; };
+		FA4C02BA2292FFEB00EB5EC4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02B92292FFEB00EB5EC4 /* LoginViewController.swift */; };
+		FA4C02BC2293003900EB5EC4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02BB2293003900EB5EC4 /* RegisterViewController.swift */; };
+		FA4C02BE2293069A00EB5EC4 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02BD2293069A00EB5EC4 /* RecoverPasswordViewController.swift */; };
+		FA4C02C02293070500EB5EC4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02BF2293070500EB5EC4 /* Model.swift */; };
+		FA4C02C222930CE700EB5EC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02C122930CE700EB5EC4 /* HomeViewController.swift */; };
+		FA4C02C42293284200EB5EC4 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02C32293284200EB5EC4 /* ListViewController.swift */; };
+		FA4C02C622933A8300EB5EC4 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02C522933A8300EB5EC4 /* extensions.swift */; };
+		FA8CC4FA22947E0800590699 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CC4F922947E0800590699 /* Services.swift */; };
+		FA8CC4FC2294864C00590699 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CC4FB2294864C00590699 /* Cells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA4C02A12292EB5500EB5EC4 /* ejemplo1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ejemplo1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA4C02A42292EB5500EB5EC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA4C02A62292EB5500EB5EC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA4C02A92292EB5500EB5EC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA4C02AB2292EB5600EB5EC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA4C02AE2292EB5600EB5EC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA4C02B02292EB5600EB5EC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA4C02B92292FFEB00EB5EC4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA4C02BB2293003900EB5EC4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FA4C02BD2293069A00EB5EC4 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		FA4C02BF2293070500EB5EC4 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FA4C02C122930CE700EB5EC4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FA4C02C32293284200EB5EC4 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		FA4C02C522933A8300EB5EC4 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		FA8CC4F922947E0800590699 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		FA8CC4FB2294864C00590699 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,30 @@
 		FA4C02A32292EB5500EB5EC4 /* ejemplo1 */ = {
 			isa = PBXGroup;
 			children = (
-				FA4C02A42292EB5500EB5EC4 /* AppDelegate.swift */,
-				FA4C02A62292EB5500EB5EC4 /* ViewController.swift */,
 				FA4C02A82292EB5500EB5EC4 /* Main.storyboard */,
+				FA4C02C122930CE700EB5EC4 /* HomeViewController.swift */,
+				FA4C02B92292FFEB00EB5EC4 /* LoginViewController.swift */,
+				FA4C02BB2293003900EB5EC4 /* RegisterViewController.swift */,
+				FA4C02BD2293069A00EB5EC4 /* RecoverPasswordViewController.swift */,
+				FA4C02C32293284200EB5EC4 /* ListViewController.swift */,
+				FA4C02BF2293070500EB5EC4 /* Model.swift */,
+				FA8CC4F922947E0800590699 /* Services.swift */,
+				FA8CC4FB2294864C00590699 /* Cells.swift */,
+				FA4C02B82292FF0D00EB5EC4 /* Support */,
+			);
+			path = ejemplo1;
+			sourceTree = "<group>";
+		};
+		FA4C02B82292FF0D00EB5EC4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				FA4C02A42292EB5500EB5EC4 /* AppDelegate.swift */,
 				FA4C02AB2292EB5600EB5EC4 /* Assets.xcassets */,
 				FA4C02AD2292EB5600EB5EC4 /* LaunchScreen.storyboard */,
 				FA4C02B02292EB5600EB5EC4 /* Info.plist */,
+				FA4C02C522933A8300EB5EC4 /* extensions.swift */,
 			);
-			path = ejemplo1;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA4C02A72292EB5500EB5EC4 /* ViewController.swift in Sources */,
+				FA4C02C02293070500EB5EC4 /* Model.swift in Sources */,
+				FA4C02BC2293003900EB5EC4 /* RegisterViewController.swift in Sources */,
+				FA4C02BA2292FFEB00EB5EC4 /* LoginViewController.swift in Sources */,
+				FA4C02C622933A8300EB5EC4 /* extensions.swift in Sources */,
+				FA4C02BE2293069A00EB5EC4 /* RecoverPasswordViewController.swift in Sources */,
 				FA4C02A52292EB5500EB5EC4 /* AppDelegate.swift in Sources */,
+				FA4C02C222930CE700EB5EC4 /* HomeViewController.swift in Sources */,
+				FA8CC4FA22947E0800590699 /* Services.swift in Sources */,
+				FA4C02C42293284200EB5EC4 /* ListViewController.swift in Sources */,
+				FA8CC4FC2294864C00590699 /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ejemplo1/Info.plist;
+				INFOPLIST_FILE = ejemplo1/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -291,7 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ejemplo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -300,7 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ejemplo1/Info.plist;
+				INFOPLIST_FILE = ejemplo1/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ejemplo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
