@@ -8,13 +8,6 @@
 
 import Foundation
 
-
-struct Employee: Codable {
-    var name: String
-}
-
-
-
 protocol UpdateModelDelegate: class {
     func inserNewUser(_ user: User)
 }
