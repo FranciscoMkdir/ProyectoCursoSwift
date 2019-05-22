@@ -34,8 +34,7 @@ class UserTableViewCell: UITableViewCell {
         guard let birthdayString = employee.birthday,
               let birthday = Double(birthdayString) else {return}
         let dateEmployee = Date(timeIntervalSince1970: birthday)
-        print(dateEmployee)
-        buttonShare.isHidden = Date().isCurrentBirthday(dateEmployee)
+        buttonShare.isHidden = !Date().isCurrentBirthday(dateEmployee)
         }}
     
     override func awakeFromNib() {
