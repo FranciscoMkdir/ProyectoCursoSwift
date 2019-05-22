@@ -20,6 +20,7 @@
 		FA4C02C622933A8300EB5EC4 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4C02C522933A8300EB5EC4 /* extensions.swift */; };
 		FA8CC4FC2294864C00590699 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CC4FB2294864C00590699 /* Cells.swift */; };
 		FA8CC4FE229489D900590699 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CC4FD229489D900590699 /* Services.swift */; };
+		FACDDC822295828800949D57 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDDC812295828800949D57 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FA4C02C522933A8300EB5EC4 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		FA8CC4FB2294864C00590699 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		FA8CC4FD229489D900590699 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		FACDDC812295828800949D57 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				FA4C02BB2293003900EB5EC4 /* RegisterViewController.swift */,
 				FA4C02BD2293069A00EB5EC4 /* RecoverPasswordViewController.swift */,
 				FA4C02C32293284200EB5EC4 /* ListViewController.swift */,
+				FACDDC812295828800949D57 /* DetailViewController.swift */,
 				FA4C02BF2293070500EB5EC4 /* Model.swift */,
 				FA8CC4FB2294864C00590699 /* Cells.swift */,
 				FA8CC4FD229489D900590699 /* Services.swift */,
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FACDDC822295828800949D57 /* DetailViewController.swift in Sources */,
 				FA4C02C02293070500EB5EC4 /* Model.swift in Sources */,
 				FA4C02BC2293003900EB5EC4 /* RegisterViewController.swift in Sources */,
 				FA4C02BA2292FFEB00EB5EC4 /* LoginViewController.swift in Sources */,

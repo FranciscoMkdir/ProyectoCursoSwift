@@ -25,6 +25,19 @@ class UserTableViewCell: UITableViewCell {
         buttonShare.isHidden = !Date().isCurrentBirthday(user.date)
         }}
     
+    
+    var employee: Employee?{didSet{
+        guard let employee = employee else {return}
+        nameTextField.text = employee.name
+        dateTextField.text = employee.company
+        ageTextField.text = employee.seniority
+        guard let birthdayString = employee.birthday,
+              let birthday = Double(birthdayString) else {return}
+        let dateEmployee = Date(timeIntervalSince1970: birthday)
+        print(dateEmployee)
+        buttonShare.isHidden = Date().isCurrentBirthday(dateEmployee)
+        }}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         buttonShare.isHidden = true

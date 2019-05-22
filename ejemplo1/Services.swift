@@ -8,7 +8,7 @@
 
 import UIKit
 
-let url = URL(string: "http://www.develogeek.com/netec/capitulo4/consumoApi/Empleados/getList.php")!
+let url = URL(string: "http://www.develogeeks.com/netec/capitulo4/consumoApi/Empleados/getList.php")!
 
 final class Webservice{
     typealias Handler = ([Employee]?) -> ()
@@ -16,18 +16,17 @@ final class Webservice{
     func loadAllEmployees(completion: @escaping Handler){
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(response)
-            print(error)
             guard let data = data else {
                 return completion(nil)
             }
             do{
-                let result =  try JSONDecoder().decode([Employee].self, from: data)
-                return completion(result)
-            }catch{
+                let result =  try JSONDecoder().decode(EmployeesWS.self, from: data)
+                return completion(result.employees)
+            }catch let error{
+                print(error)
                 return completion(nil)
             }
-        }
+        }.resume()
     }
     
 }

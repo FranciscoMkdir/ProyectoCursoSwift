@@ -8,8 +8,39 @@
 
 import Foundation
 
-struct Employee: Codable {
+struct EmployeesWS: Codable {
+    var employees = [Employee]()
     
+    enum CodingKeys: String, CodingKey {
+        case employees = "data"
+    }
+
+}
+
+struct Employee: Codable {
+    var id: Int?
+    var name: String?
+    var email: String?
+    var photo: String?
+    var address: String?
+    var company: String?
+    var area: String?
+    var seniority: String?
+    var dateInPayroll: String?
+    var birthday: String?
+    var age: String?
+    var maritalStatus: String?
+    var role: String?
+    var productsPurchased: String?
+    
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "idEmployee"
+        case name = "fullName"
+        case email, photo, address, seniority
+        case company, area, dateInPayroll, birthday
+        case age, maritalStatus, role, productsPurchased
+    }
 }
 
 
