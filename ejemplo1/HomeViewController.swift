@@ -22,6 +22,12 @@ class HomeViewController: UIViewController {
         vc.model = model
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
 
+    
+    @IBAction func showChargeController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = storyboard.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else {return}
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

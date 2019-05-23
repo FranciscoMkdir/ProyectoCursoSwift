@@ -21,6 +21,7 @@
 		FA8CC4FC2294864C00590699 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CC4FB2294864C00590699 /* Cells.swift */; };
 		FA8CC4FE229489D900590699 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CC4FD229489D900590699 /* Services.swift */; };
 		FACDDC822295828800949D57 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDDC812295828800949D57 /* DetailViewController.swift */; };
+		FACDDCA22296E15F00949D57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDDCA12296E15F00949D57 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FA8CC4FB2294864C00590699 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		FA8CC4FD229489D900590699 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		FACDDC812295828800949D57 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FACDDCA12296E15F00949D57 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				FA4C02A32292EB5500EB5EC4 /* ejemplo1 */,
-				FA4C02A22292EB5500EB5EC4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +68,7 @@
 				FA4C02A12292EB5500EB5EC4 /* ejemplo1.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FA4C02A32292EB5500EB5EC4 /* ejemplo1 */ = {
@@ -79,9 +81,11 @@
 				FA4C02BD2293069A00EB5EC4 /* RecoverPasswordViewController.swift */,
 				FA4C02C32293284200EB5EC4 /* ListViewController.swift */,
 				FACDDC812295828800949D57 /* DetailViewController.swift */,
-				FA4C02BF2293070500EB5EC4 /* Model.swift */,
+				FACDDCA12296E15F00949D57 /* MapViewController.swift */,
 				FA8CC4FB2294864C00590699 /* Cells.swift */,
 				FA8CC4FD229489D900590699 /* Services.swift */,
+				FA4C02BF2293070500EB5EC4 /* Model.swift */,
+				FA4C02A22292EB5500EB5EC4 /* Products */,
 				FA4C02B82292FF0D00EB5EC4 /* Support */,
 			);
 			path = ejemplo1;
@@ -177,6 +181,7 @@
 				FA4C02C622933A8300EB5EC4 /* extensions.swift in Sources */,
 				FA4C02BE2293069A00EB5EC4 /* RecoverPasswordViewController.swift in Sources */,
 				FA8CC4FE229489D900590699 /* Services.swift in Sources */,
+				FACDDCA22296E15F00949D57 /* MapViewController.swift in Sources */,
 				FA4C02A52292EB5500EB5EC4 /* AppDelegate.swift in Sources */,
 				FA4C02C222930CE700EB5EC4 /* HomeViewController.swift in Sources */,
 				FA4C02C42293284200EB5EC4 /* ListViewController.swift in Sources */,

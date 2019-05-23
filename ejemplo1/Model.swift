@@ -7,6 +7,19 @@
 //
 
 import Foundation
+import MapKit
+
+struct Direction {
+    let employee: Employee
+    var placemarks = [CLPlacemark]()
+    
+    
+    mutating func addPlacemarks(_CLPlacemark placemarks: [CLPlacemark]?){
+        guard let placemarks = placemarks else {return}
+        self.placemarks = placemarks
+    }
+}
+
 
 struct EmployeesWS: Codable {
     var employees = [Employee]()

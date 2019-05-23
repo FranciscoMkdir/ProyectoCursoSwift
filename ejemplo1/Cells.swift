@@ -9,6 +9,21 @@
 import UIKit
 
 
+class RouteTableViewCell: UITableViewCell {
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var iconRoute: UIImageView!
+    
+    var direction: Direction?{didSet{
+        guard let direction = direction else {return}
+        nameLabel.text = direction.employee.name
+        addressLabel.text = direction.employee.address
+        iconRoute.isHidden = direction.placemarks.isEmpty ? true : false
+        }}
+    
+}
+
+
 class UserTableViewCell: UITableViewCell {
     let dateFormater = DateFormatter()
     @IBOutlet weak var buttonShare: UIButton!
