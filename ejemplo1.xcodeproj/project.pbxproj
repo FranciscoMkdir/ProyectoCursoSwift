@@ -22,6 +22,8 @@
 		FA8CC4FE229489D900590699 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CC4FD229489D900590699 /* Services.swift */; };
 		FACDDC822295828800949D57 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDDC812295828800949D57 /* DetailViewController.swift */; };
 		FACDDCA22296E15F00949D57 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDDCA12296E15F00949D57 /* MapViewController.swift */; };
+		FACDDCC622972BAD00949D57 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FACDDCC422972BAD00949D57 /* Model.xcdatamodeld */; };
+		FACDDCC82298242C00949D57 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACDDCC72298242C00949D57 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		FA8CC4FD229489D900590699 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		FACDDC812295828800949D57 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FACDDCA12296E15F00949D57 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FACDDCC522972BAD00949D57 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FACDDCC72298242C00949D57 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				FA8CC4FB2294864C00590699 /* Cells.swift */,
 				FA8CC4FD229489D900590699 /* Services.swift */,
 				FA4C02BF2293070500EB5EC4 /* Model.swift */,
+				FACDDCC72298242C00949D57 /* CoreDataManager.swift */,
+				FACDDCC422972BAD00949D57 /* Model.xcdatamodeld */,
 				FA4C02A22292EB5500EB5EC4 /* Products */,
 				FA4C02B82292FF0D00EB5EC4 /* Support */,
 			);
@@ -185,6 +191,8 @@
 				FA4C02A52292EB5500EB5EC4 /* AppDelegate.swift in Sources */,
 				FA4C02C222930CE700EB5EC4 /* HomeViewController.swift in Sources */,
 				FA4C02C42293284200EB5EC4 /* ListViewController.swift in Sources */,
+				FACDDCC622972BAD00949D57 /* Model.xcdatamodeld in Sources */,
+				FACDDCC82298242C00949D57 /* CoreDataManager.swift in Sources */,
 				FA8CC4FC2294864C00590699 /* Cells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +391,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FACDDCC422972BAD00949D57 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FACDDCC522972BAD00949D57 /* Model.xcdatamodel */,
+			);
+			currentVersion = FACDDCC522972BAD00949D57 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FA4C02992292EB5500EB5EC4 /* Project object */;
 }

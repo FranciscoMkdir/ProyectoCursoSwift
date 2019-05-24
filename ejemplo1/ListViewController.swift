@@ -18,19 +18,40 @@ class ListViewController: UIViewController {
         super.viewDidLoad()
         title = "EMPLEADOS"
         tableView.delegate = self
-        fetchEmployees()
+        getEmployees()
     }
     
-    private func fetchEmployees(){
+    private func getEmployees(){
         activityIndicator.startAnimating()
+        guard let employees = CoreDataManager.getEmployees() else{
+            fetchEmployeesFromWS()
+            return
+        }
+        if employees.isEmpty {
+            fetchEmployeesFromWS()
+            return
+        }
+        print("Fetch employees from CoreData")
+        activityIndicator.stopAnimating()
+        self.employees = employees
+        tableView.reloadData()
+    }
+    
+    private func fetchEmployeesFromWS(){
+        print("Fetch employees from Webservices")
         Webservice().loadAllEmployees { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
                 guard let result = result else {return}
                 self?.employees = result
                 self?.tableView.reloadData()
+                self?.saveEmployeesCoreData()
             }
         }
+    }
+    
+    func saveEmployeesCoreData(){
+        CoreDataManager.saveEmployees(employees)
     }
     
     private func showDetailController(employee: Employee){
@@ -38,6 +59,7 @@ class ListViewController: UIViewController {
         guard let vc = storyboard.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else {
             fatalError("Error instantiate DetailViewController")
         }
+        vc.delegate = self
         vc.employee = employee
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -48,6 +70,13 @@ class ListViewController: UIViewController {
         let image = UIImage(named: "iconShare")
         let activityController = UIActivityViewController(activityItems: [title, image!], applicationActivities: nil)
         self.present(activityController, animated: true, completion: nil)
+    }
+}
+
+extension ListViewController: UpdateEmployeeProtocol{
+    func update(employee: Employee) {
+        guard let index = employees.firstIndex(where: { $0.id == employee.id }) else {return}
+        employees[index] = employee
     }
 }
 

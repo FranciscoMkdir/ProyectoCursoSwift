@@ -8,21 +8,25 @@
 
 import UIKit
 
+protocol UpdateEmployeeProtocol: class {
+    func update(employee: Employee)
+}
+
 class DetailViewController: UIViewController {
+    weak var delegate: UpdateEmployeeProtocol?
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var companyLabel: UILabel!
-    @IBOutlet weak var areaLabel: UILabel!
-    @IBOutlet weak var adressLabel: UILabel!
-    @IBOutlet weak var seniorityLabel: UILabel!
-    @IBOutlet weak var dateInPayrollLabel: UILabel!
     @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var marialStatusLabel: UILabel!
-    @IBOutlet weak var roleLabel: UILabel!
-    
-    
-    @IBOutlet weak var productsPurchasedLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var areaTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var seniorityTextField: UITextField!
+    @IBOutlet weak var maritalTextField: UITextField!
+    @IBOutlet weak var roleTextField: UITextField!
+    @IBOutlet weak var productsTextField: UITextField!
     
     var employee: Employee?
 
@@ -34,18 +38,47 @@ class DetailViewController: UIViewController {
     }
     
     private func setDetail(employee: Employee){
+        idLabel.text = "ID empleado: \(employee.id ?? 0)"
         nameLabel.text = employee.name
-        emailLabel.text = employee.email
+        emailTextField.text = employee.email
         companyLabel.text = employee.company
-        areaLabel.text = employee.area
-        adressLabel.text = employee.address
-        seniorityLabel.text = employee.seniority
-        dateInPayrollLabel.text =  "Fecha de Pago: \(dateFromTimestamp(birthday: employee.dateInPayroll) ?? "Sin especificar")"
+        areaTextField.text = employee.area
+        addressTextField.text = employee.address
+        seniorityTextField.text = employee.seniority
         ageLabel.text = employee.age
         birthdayLabel.text = "Cumpleaños: \(dateFromTimestamp(birthday: employee.birthday) ?? "Sin especificar")"
-        roleLabel.text = employee.role
-        marialStatusLabel.text = employee.maritalStatus
-        productsPurchasedLabel.text = employee.productsPurchased ?? "Sin especificar"
+        roleTextField.text = employee.role ?? "Sin especificar"
+        maritalTextField.text = employee.maritalStatus ?? "Sin especificar"
+        productsTextField.text = employee.productsPurchased ?? "Sin especificar"
+    }
+    
+    
+    @IBAction func update() {
+        guard var employee = employee else { return }
+        employee.email = emailTextField.text
+        employee.area = areaTextField.text
+        employee.address = addressTextField.text
+        employee.seniority =  seniorityTextField.text
+        employee.maritalStatus = maritalTextField.text
+        employee.role = roleTextField.text
+        employee.productsPurchased = productsTextField.text
+        
+        activityIndicator.startAnimating()
+        if CoreDataManager.editEmployee(employee){
+            showAlertController(success: true)
+            delegate?.update(employee: employee)
+        }else{
+            showAlertController(success: false)
+        }
+        activityIndicator.stopAnimating()
+    }
+    
+    private func showAlertController(success: Bool){
+        let alertController = UIAlertController(title: success ? "Actualización" : "Error",
+                                                message: success ? "Los datos se actualizaron" : "Los datos no pudieron salvarse",
+                                                preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Aceptar", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
     
     private func dateFromTimestamp(birthday: String?) -> String?{
