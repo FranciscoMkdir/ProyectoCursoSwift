@@ -31,14 +31,12 @@ class ListViewController: UIViewController {
             fetchEmployeesFromWS()
             return
         }
-        print("Fetch employees from CoreData")
         activityIndicator.stopAnimating()
         self.employees = employees
         tableView.reloadData()
     }
     
     private func fetchEmployeesFromWS(){
-        print("Fetch employees from Webservices")
         Webservice().loadAllEmployees { [weak self] (result) in
             DispatchQueue.main.async {
                 self?.activityIndicator.stopAnimating()
